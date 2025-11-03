@@ -37,27 +37,6 @@ func (p *playerRepo) BatchGetPlayerVipTags(playerIds []int64) (tagsMap map[int64
 	if err != nil {
 		return nil, err
 	}
-
-	tagsMap = make(map[int64]common.HPlayerVipTags)
-	for _, playerInfo := range playerInfos {
-		playerId := playerInfo.GetId()
-		// 从PlayerData中提取VipTags字段
-		// 注意：需要确保PlayerData中有VipTags字段或者通过其他方式获取
-		if len(playerInfo.GetVipTags()) > 0 {
-			tagsMap[playerId] = common.HPlayerVipTags(cast.ToInt(playerInfo.GetVipTags()))
-		} else {
-			tagsMap[playerId] = common.HPlayerVipTagsUnKnow
-		}
-	}
-
-	// 处理未返回的playerId（可能不存在）
-	for _, playerId := range playerIds {
-		if _, exists := tagsMap[playerId]; !exists {
-			tagsMap[playerId] = common.HPlayerVipTagsUnKnow
-		}
-	}
-
-	return tagsMap, nil
 }
 
 // GetPlayerVipTag 获取单个玩家VIP标签（基于批量方法）
