@@ -30,15 +30,6 @@ func main() {
 	log.Printf("Response: %s", response.GetValue())
 }
 
-// BatchGetPlayerVipTags 批量获取玩家VIP标签
-func (p *playerRepo) BatchGetPlayerVipTags(playerIds []int64) (tagsMap map[int64]common.HPlayerVipTags, err error) {
-	// 复用批量查询逻辑
-	playerInfos, err := p.GetPlayerInfosByIdField(context.Background(), playerIds, []string{"VipTags"})
-	if err != nil {
-		return nil, err
-	}
-}
-
 // GetPlayerVipTag 获取单个玩家VIP标签（基于批量方法）
 func (p *playerRepo) GetPlayerVipTag(playerId int64) (tags common.HPlayerVipTags, err error) {
 	tagsMap, err := p.BatchGetPlayerVipTags([]int64{playerId})
