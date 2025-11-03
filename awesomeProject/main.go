@@ -1,4 +1,4 @@
-// main.go
+// main.test.go
 package main
 
 import (
@@ -16,7 +16,7 @@ func main() {
 		}
 	}()
 
-	// 创建客户端并调用服务
+	// 创建客户端并调用服务 localhost:50051
 	client, err := client.NewHelloClient("localhost:50051")
 	if err != nil {
 		log.Fatalf("Failed to create client: %v", err)
