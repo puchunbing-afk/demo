@@ -7,6 +7,7 @@
 package hello
 
 import (
+	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -69,11 +70,11 @@ var File_hello_proto protoreflect.FileDescriptor
 
 const file_hello_proto_rawDesc = "" +
 	"\n" +
-	"\vhello.proto\x12\x05hello\"\x1e\n" +
+	"\vhello.proto\x12\x05hello\x1a\x1cgoogle/api/annotations.proto\"\x1e\n" +
 	"\x06String\x12\x14\n" +
-	"\x05value\x18\x01 \x01(\tR\x05value25\n" +
-	"\fHelloService\x12%\n" +
-	"\x05Hello\x12\r.hello.String\x1a\r.hello.StringB\n" +
+	"\x05value\x18\x01 \x01(\tR\x05value2R\n" +
+	"\fHelloService\x12B\n" +
+	"\x05Hello\x12\r.hello.String\x1a\r.hello.String\"\x1b\x82\xd3\xe4\x93\x02\x15:\x01*\"\x10/v1/example/echoB\n" +
 	"Z\b./;hellob\x06proto3"
 
 var (

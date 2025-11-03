@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 option go_package = "./;hello";
+import "google/api/annotations.proto";
 
 package hello;
 
@@ -9,5 +10,10 @@ message String {
 }
 
 service HelloService {
-  rpc Hello (String) returns (String);
+  rpc Hello (String) returns (String){
+    option (google.api.http) = {
+      post: "/v1/example/echo"
+      body: "*"
+    };
+  }
 }
