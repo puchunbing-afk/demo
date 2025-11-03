@@ -4,6 +4,7 @@ package main
 import (
 	"awesomeProject/client"
 	"awesomeProject/server"
+	"fmt"
 	"log"
 )
 
@@ -21,6 +22,7 @@ func main() {
 		log.Fatalf("Failed to create client: %v", err)
 	}
 	defer client.Close()
+	fmt.Println("调用服务")
 
 	response, err := client.CallHello("测试king")
 	if err != nil {

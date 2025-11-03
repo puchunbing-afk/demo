@@ -35,5 +35,5 @@ bin/
 *.swp
 
 # Go module files (if you really need to ignore them)
- go.mod
- go.sum
+#go.mod
+#go.sum
