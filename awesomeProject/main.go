@@ -29,17 +29,3 @@ func main() {
 
 	log.Printf("Response: %s", response.GetValue())
 }
-
-// GetPlayerVipTag 获取单个玩家VIP标签（基于批量方法）
-func (p *playerRepo) GetPlayerVipTag(playerId int64) (tags common.HPlayerVipTags, err error) {
-	tagsMap, err := p.BatchGetPlayerVipTags([]int64{playerId})
-	if err != nil {
-		return common.HPlayerVipTagsUnKnow, err
-	}
-
-	if tag, exists := tagsMap[playerId]; exists {
-		return tag, nil
-	}
-
-	return common.HPlayerVipTagsUnKnow, nil
-}
