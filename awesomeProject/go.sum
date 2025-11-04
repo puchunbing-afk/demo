@@ -1,5 +1,5 @@
-git.huoys.com/oversea/grpc v0.0.3-0.20251103035233-85784efc4a17 h1:nzkSSqxO7pGLc0V60yq/k4YBTraf4go33hYVpT7+Do4=
-git.huoys.com/oversea/grpc v0.0.3-0.20251103035233-85784efc4a17/go.mod h1:5Ug+M3yK5jyqdulBJYt3f+SgKK7EDNE9OT07yhERveE=
+git.huoys.com/oversea/grpc v0.0.3-0.20251104074105-fc88175aca79 h1:/igRd7Sw+NPdbZrCcH2Y/cVzd3K+SwagVxA52I8uKQg=
+git.huoys.com/oversea/grpc v0.0.3-0.20251104074105-fc88175aca79/go.mod h1:5Ug+M3yK5jyqdulBJYt3f+SgKK7EDNE9OT07yhERveE=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

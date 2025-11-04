@@ -32,11 +32,14 @@ func main() {
 	//})
 
 	// 测试 GetPlayerInfosByIdFieldReform
-	resp, err := client.GetPlayerInfosByIdFieldReform(ctx, &pb.GetPlayerInfosByIdFieldRequest{
-		PlayerIds: []int64{1001375, 1089397, 1101206},
-		Fields:    []string{"Nick", "Sex"},
-	})
+	//resp, err := client.GetPlayerInfosByIdFieldReform(ctx, &pb.GetPlayerInfosByIdFieldRequest{
+	//	PlayerIds: []int64{1001375, 1089397, 1101206},
+	//	Fields:    []string{"Nick", "Sex", "OS"},
+	//})
 
+	resp, err := client.GetUserVipBlueTagIds(ctx, &pb.GetUserVipBlueTagIdsRequest{
+		Sum: 5,
+	})
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}
